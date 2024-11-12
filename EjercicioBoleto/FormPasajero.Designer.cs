@@ -30,16 +30,16 @@
         {
             btnAgregar = new Button();
             label5 = new Label();
-            textBox5 = new TextBox();
+            txtUniversidad = new TextBox();
             label4 = new Label();
-            textBox4 = new TextBox();
+            txtLegajo = new TextBox();
             chkBoxEstudiante = new CheckBox();
             label3 = new Label();
-            textBox3 = new TextBox();
+            txtEdad = new TextBox();
             label2 = new Label();
-            textBox2 = new TextBox();
+            txtApellido = new TextBox();
             label1 = new Label();
-            textBox1 = new TextBox();
+            txtNombre = new TextBox();
             btnModificar = new Button();
             SuspendLayout();
             // 
@@ -51,6 +51,7 @@
             btnAgregar.TabIndex = 0;
             btnAgregar.Text = "Aceptar";
             btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // label5
             // 
@@ -61,12 +62,12 @@
             label5.TabIndex = 25;
             label5.Text = "Universidad";
             // 
-            // textBox5
+            // txtUniversidad
             // 
-            textBox5.Location = new Point(12, 319);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(100, 23);
-            textBox5.TabIndex = 24;
+            txtUniversidad.Location = new Point(12, 319);
+            txtUniversidad.Name = "txtUniversidad";
+            txtUniversidad.Size = new Size(100, 23);
+            txtUniversidad.TabIndex = 24;
             // 
             // label4
             // 
@@ -77,12 +78,12 @@
             label4.TabIndex = 23;
             label4.Text = "Legajo";
             // 
-            // textBox4
+            // txtLegajo
             // 
-            textBox4.Location = new Point(12, 251);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 22;
+            txtLegajo.Location = new Point(12, 251);
+            txtLegajo.Name = "txtLegajo";
+            txtLegajo.Size = new Size(100, 23);
+            txtLegajo.TabIndex = 22;
             // 
             // chkBoxEstudiante
             // 
@@ -93,6 +94,7 @@
             chkBoxEstudiante.TabIndex = 21;
             chkBoxEstudiante.Text = "Estudiante";
             chkBoxEstudiante.UseVisualStyleBackColor = true;
+            chkBoxEstudiante.CheckedChanged += chkBoxEstudiante_CheckedChanged;
             // 
             // label3
             // 
@@ -103,12 +105,12 @@
             label3.TabIndex = 20;
             label3.Text = "Edad";
             // 
-            // textBox3
+            // txtEdad
             // 
-            textBox3.Location = new Point(12, 151);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 19;
+            txtEdad.Location = new Point(12, 151);
+            txtEdad.Name = "txtEdad";
+            txtEdad.Size = new Size(100, 23);
+            txtEdad.TabIndex = 19;
             // 
             // label2
             // 
@@ -119,12 +121,12 @@
             label2.TabIndex = 18;
             label2.Text = "Apellido";
             // 
-            // textBox2
+            // txtApellido
             // 
-            textBox2.Location = new Point(12, 96);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 17;
+            txtApellido.Location = new Point(12, 96);
+            txtApellido.Name = "txtApellido";
+            txtApellido.Size = new Size(100, 23);
+            txtApellido.TabIndex = 17;
             // 
             // label1
             // 
@@ -135,12 +137,12 @@
             label1.TabIndex = 16;
             label1.Text = "Nombre";
             // 
-            // textBox1
+            // txtNombre
             // 
-            textBox1.Location = new Point(12, 37);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 15;
+            txtNombre.Location = new Point(12, 37);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(100, 23);
+            txtNombre.TabIndex = 15;
             // 
             // btnModificar
             // 
@@ -158,19 +160,20 @@
             ClientSize = new Size(483, 450);
             Controls.Add(btnModificar);
             Controls.Add(label5);
-            Controls.Add(textBox5);
+            Controls.Add(txtUniversidad);
             Controls.Add(label4);
-            Controls.Add(textBox4);
+            Controls.Add(txtLegajo);
             Controls.Add(chkBoxEstudiante);
             Controls.Add(label3);
-            Controls.Add(textBox3);
+            Controls.Add(txtEdad);
             Controls.Add(label2);
-            Controls.Add(textBox2);
+            Controls.Add(txtApellido);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(txtNombre);
             Controls.Add(btnAgregar);
             Name = "FormPasajero";
             Text = "FormPasajero";
+            Load += FormPasajero_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -179,16 +182,16 @@
 
         private Button btnAgregar;
         private Label label5;
-        private TextBox textBox5;
+        private TextBox txtUniversidad;
         private Label label4;
-        private TextBox textBox4;
+        private TextBox txtLegajo;
         private CheckBox chkBoxEstudiante;
         private Label label3;
-        private TextBox textBox3;
+        private TextBox txtEdad;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox txtApellido;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox txtNombre;
         private Button btnModificar;
     }
 }

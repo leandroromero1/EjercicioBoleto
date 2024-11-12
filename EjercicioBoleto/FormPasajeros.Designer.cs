@@ -28,67 +28,105 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            dgvPasajeros = new DataGridView();
+            rdbtnPasajeros = new RadioButton();
+            rdbtnEstudiantes = new RadioButton();
+            btnAgregar = new Button();
+            btnModificar = new Button();
+            btnEliminar = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgvPasajeros).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgvPasajeros
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 12);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(688, 257);
-            dataGridView1.TabIndex = 0;
+            dgvPasajeros.AllowUserToAddRows = false;
+            dgvPasajeros.AllowUserToDeleteRows = false;
+            dgvPasajeros.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvPasajeros.Location = new Point(12, 12);
+            dgvPasajeros.Name = "dgvPasajeros";
+            dgvPasajeros.ReadOnly = true;
+            dgvPasajeros.Size = new Size(910, 397);
+            dgvPasajeros.TabIndex = 0;
             // 
-            // radioButton1
+            // rdbtnPasajeros
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(709, 17);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(94, 19);
-            radioButton1.TabIndex = 1;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "radioButton1";
-            radioButton1.UseVisualStyleBackColor = true;
-            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
+            rdbtnPasajeros.AutoSize = true;
+            rdbtnPasajeros.Location = new Point(928, 24);
+            rdbtnPasajeros.Name = "rdbtnPasajeros";
+            rdbtnPasajeros.Size = new Size(125, 19);
+            rdbtnPasajeros.TabIndex = 1;
+            rdbtnPasajeros.TabStop = true;
+            rdbtnPasajeros.Text = "Pasajeros regulares";
+            rdbtnPasajeros.UseVisualStyleBackColor = true;
+            rdbtnPasajeros.CheckedChanged += radioButton1_CheckedChanged;
             // 
-            // radioButton2
+            // rdbtnEstudiantes
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(708, 62);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(94, 19);
-            radioButton2.TabIndex = 2;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "radioButton2";
-            radioButton2.UseVisualStyleBackColor = true;
-            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
+            rdbtnEstudiantes.AutoSize = true;
+            rdbtnEstudiantes.Location = new Point(928, 49);
+            rdbtnEstudiantes.Name = "rdbtnEstudiantes";
+            rdbtnEstudiantes.Size = new Size(137, 19);
+            rdbtnEstudiantes.TabIndex = 2;
+            rdbtnEstudiantes.TabStop = true;
+            rdbtnEstudiantes.Text = "Pasajeros Estudiantes";
+            rdbtnEstudiantes.UseVisualStyleBackColor = true;
+            rdbtnEstudiantes.CheckedChanged += radioButton2_CheckedChanged;
             // 
-            // Form1
+            // btnAgregar
+            // 
+            btnAgregar.Location = new Point(12, 415);
+            btnAgregar.Name = "btnAgregar";
+            btnAgregar.Size = new Size(75, 23);
+            btnAgregar.TabIndex = 3;
+            btnAgregar.Text = "Agregar";
+            btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
+            // 
+            // btnModificar
+            // 
+            btnModificar.Location = new Point(318, 415);
+            btnModificar.Name = "btnModificar";
+            btnModificar.Size = new Size(75, 23);
+            btnModificar.TabIndex = 4;
+            btnModificar.Text = "Modificar";
+            btnModificar.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminar
+            // 
+            btnEliminar.Location = new Point(713, 415);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(75, 23);
+            btnEliminar.TabIndex = 5;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
+            // 
+            // FormPasajeros
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(radioButton2);
-            Controls.Add(radioButton1);
-            Controls.Add(dataGridView1);
-            Name = "Form1";
+            ClientSize = new Size(1065, 450);
+            Controls.Add(btnEliminar);
+            Controls.Add(btnModificar);
+            Controls.Add(btnAgregar);
+            Controls.Add(rdbtnEstudiantes);
+            Controls.Add(rdbtnPasajeros);
+            Controls.Add(dgvPasajeros);
+            Name = "FormPasajeros";
             Text = "Form1";
             Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvPasajeros).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
+        private DataGridView dgvPasajeros;
+        private RadioButton rdbtnPasajeros;
+        private RadioButton rdbtnEstudiantes;
+        private Button btnAgregar;
+        private Button btnModificar;
+        private Button btnEliminar;
     }
 }

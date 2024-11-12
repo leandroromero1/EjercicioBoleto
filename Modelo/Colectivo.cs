@@ -12,9 +12,12 @@ namespace Modelo
         public int Linea { get; set; }
         private List<Pasajero> pasajeros;
 
-        public Colectivo()
+
+        public List<Pasajero> Pasajeros = new List<Pasajero>();
+
+        /* public Colectivo()
         {
             pasajeros = new List<Pasajero>();
-        }
+        }*/
     }
 }
