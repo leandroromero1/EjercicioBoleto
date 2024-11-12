@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    internal class Colectivo
+    public class Colectivo
     {
         public int Id { get; set; }
         public int Linea { get; set; }
-        private List<Pasajero> pasajeros;
+        //public List<Pasajero> pasajeros { get; set; }
 
 
-        public List<Pasajero> Pasajeros = new List<Pasajero>();
+        public List<Pasajero> Pasajeros { get; set; }  = new List<Pasajero>();
 
         /* public Colectivo()
         {

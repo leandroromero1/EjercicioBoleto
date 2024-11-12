@@ -18,6 +18,7 @@ namespace EjercicioBoleto
     {
         private ControladoraCRUDPasajeros controladoraPasajeros;
         private Pasajero pasajero;
+        private Colectivo colectivo;
         private bool modifica = false;
         public FormPasajero()
         {
@@ -107,39 +108,37 @@ namespace EjercicioBoleto
                 pasajero.Apellido = txtApellido.Text;
                 pasajero.Edad = Convert.ToInt32(txtEdad.Text);
                 var monodrogas = controladoraPasajeros.RecuperarPasajeros();
-                //medicamento.Monodroga = monodrogas.FirstOrDefault(c => c.Nombre == (cBoxMonodroga.SelectedItem).ToString());
-                //medicamento.NombreComercial = txtNombreComercial.Text;
-                //var pasajero = pasajero;
-                if (pasajero.Count() > 0)
+                var pasajeros = colectivo.Pasajeros;
+                if (pasajeros.Count() > 0)
                 {
                     if (modifica)
                     {
                         var modifica = controladoraPasajeros.Modificar(pasajero);
                         if (modifica)
                         {
-                            MessageBox.Show("Medicamento modificado con exito");
+                            MessageBox.Show("Pasajero modificado con exito");
                         }
                         else
                         {
-                            MessageBox.Show("Error: no se pudo modificar el Medicamento");
+                            MessageBox.Show("Error: no se pudo modificar el pasajero");
                         }
                         Close();
                     }
                     else
                     {
-                        var agregado = controladoraMedicamentos.AgregarMedicamento(medicamento);
+                        var agregado = controladoraPasajeros.Agregar(pasajero);
                         if (agregado)
                         {
-                            MessageBox.Show("Medicamento agregado con exito");
+                            MessageBox.Show("Pasajero agregado con exito");
                         }
                         else
                         {
-                            MessageBox.Show("Error: no se pudo agregar el Medicamento");
+                            MessageBox.Show("Error: no se pudo agregar el Pasajero");
                         }
                         Close();
                     }
                 }
-                
+              
             }
         }
     }
