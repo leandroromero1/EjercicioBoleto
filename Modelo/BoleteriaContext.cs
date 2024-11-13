@@ -20,8 +20,9 @@ namespace Modelo
         {
            // model.Entity<Colectivo>().HasKey(z => z.Id);
             model.Entity<Pasajero>().HasKey(x => x.Id);
-            model.Entity<PasajeroEstudiante>().ToTable("PasajerosEstudiantes");
+            model.Entity<PasajeroEstudiante>().ToTable(nameof(PasajeroEstudiante));
             model.Entity<Colectivo>().HasKey (x => x.Id);
+            model.Entity<Colectivo>().HasIndex(x => x.Patente).IsUnique();
             model.Entity<Colectivo>().HasMany(x => x.Pasajeros);
             base.OnModelCreating(model);
         }

@@ -9,16 +9,21 @@
             context = new Modelo.BoleteriaContext();
         }
 
-        public void Agregar(Modelo.Pasajero pasajero)
+        public bool Agregar(Modelo.Pasajero pasajero)
         {
             
             context.Add(pasajero);
-            context.SaveChanges();
+            return context.SaveChanges()>0;
+
         }
-        public void Modificar(Modelo.Pasajero pasajero)
+        public bool  Modificar(Modelo.Pasajero pasajero)
         {
+            
+            
+            
             context.Update(pasajero);
-            context.SaveChanges();
+            return context.SaveChanges()>0;
+
 
         }
         public void Eliminar(Modelo.Pasajero pasajero)

@@ -107,37 +107,37 @@ namespace EjercicioBoleto
                 pasajero.Nombre = txtNombre.Text;
                 pasajero.Apellido = txtApellido.Text;
                 pasajero.Edad = Convert.ToInt32(txtEdad.Text);
-                var monodrogas = controladoraPasajeros.RecuperarPasajeros();
-                var pasajeros = colectivo.Pasajeros;
-                if (pasajeros.Count() > 0)
+                //var monodrogas = controladoraPasajeros.RecuperarPasajeros();
+                //var pasajeros = colectivo.Pasajeros;
+                //if (pasajeros.Count() > 0)
+                //{
+                if (modifica)
                 {
+                    var modifica = controladoraPasajeros.Modificar(pasajero);
                     if (modifica)
                     {
-                        var modifica = controladoraPasajeros.Modificar(pasajero);
-                        if (modifica)
-                        {
-                            MessageBox.Show("Pasajero modificado con exito");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Error: no se pudo modificar el pasajero");
-                        }
-                        Close();
+                        MessageBox.Show("Pasajero modificado con exito");
                     }
                     else
                     {
-                        var agregado = controladoraPasajeros.Agregar(pasajero);
-                        if (agregado)
-                        {
-                            MessageBox.Show("Pasajero agregado con exito");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Error: no se pudo agregar el Pasajero");
-                        }
-                        Close();
+                        MessageBox.Show("Error: no se pudo modificar el pasajero");
                     }
+                    Close();
                 }
+                else
+                {
+                    var agregado = controladoraPasajeros.Agregar(pasajero);
+                    if (agregado)
+                    {
+                        MessageBox.Show("Pasajero agregado con exito");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error: no se pudo agregar el Pasajero");
+                    }
+                    Close();
+                }
+                //}
               
             }
         }

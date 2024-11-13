@@ -9,6 +9,7 @@ namespace Modelo
     public class Colectivo
     {
         public int Id { get; set; }
+        public string Patente { get; set; }
         public int Linea { get; set; }
         //public List<Pasajero> pasajeros { get; set; }
 
